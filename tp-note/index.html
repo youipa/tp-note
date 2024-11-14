@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez l'histoire de Peugeot, des débuts à aujourd'hui.">
+    <title>Notre Histoire - Peugeot</title>
+    <link rel="stylesheet" href="css/aceuil.css">
+</head>
+<body>
+    <div id="loader">
+        <h1>Chargement <span>.</span><span>.</span><span>.</span></h1>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo Peugeot">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="indexSS.html">Accueil</a></li>
+                <li><a href="histoire.html">Notre Histoire</a></li>
+                <li><a href="a_propo.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="images/208(1).jpg" alt="Peugeot 208" class="slider-image">
+                    <div class="overlay">
+                        <h1>Peugeot 208</h1>
+                        <p>Compacte, agile et moderne, la nouvelle Peugeot 208 est l'incarnation de l'innovation.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/3008.jpg" alt="Peugeot 3008" class="slider-image">
+                    <div class="overlay">
+                        <h1>Peugeot 3008</h1>
+                        <p>Le SUV de Peugeot, au design audacieux et aux technologies avancées.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/508(1).jpg" alt="Peugeot 508" class="slider-image">
+                    <div class="overlay">
+                        <h1>Peugeot 508</h1>
+                        <p>Élégance, performance et confort, la nouvelle Peugeot 508 vous fait vivre une expérience unique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="models">
+            <h2>Nos modèles populaires</h2>
+            <div class="models-list">
+                <div class="model-card">
+                    <img src="images/208.jpg" alt="Peugeot 208" class="model-image">
+                    <h3>Peugeot 208</h3>
+                    <p>Petit, agile et moderne, découvrez la nouvelle génération de la 208.</p>
+                    <a href="https://www.peugeot.fr/nos-vehicules/nouvelle-peugeot-208.html" class="btn-secondary">Voir plus</a>
+                </div>
+                <div class="model-card">
+                    <img src="images/3008.jpg" alt="Peugeot 3008" class="model-image">
+                    <h3>Peugeot 3008</h3>
+                    <p>Le SUV par excellence, alliant performance et design.</p>
+                    <a href="https://www.peugeot.fr/nos-vehicules/nouveau-peugeot-3008/hybride.html" class="btn-secondary">Voir plus</a>
+                </div>
+                <div class="model-card">
+                    <img src="images/508.jpg" alt="Peugeot 508" class="model-image">
+                    <h3>Peugeot 508</h3>
+                    <p>Sophistiquée et confortable, la Peugeot 508 redéfinit les standards du segment.</p>
+                    <a href="https://www.peugeot.fr/nos-vehicules/nouvelle-508-hybrid.html" class="btn-secondary">Voir plus</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <h2>Actualités Peugeot</h2>
+            <div class="news-item">
+                <h3>Peugeot annonce son nouveau modèle électrique</h3>
+                <p>Peugeot lance un modèle entièrement électrique, offrant une autonomie de 500 km et des performances exceptionnelles.</p>
+                <a href="https://www.media.stellantis.com/fr-fr/peugeot/press/peugeot-presente-sa-gamme-100-electrique-ainsi-que-son-engagement-pour-l-innovation-technologique-au-service-du-plaisir-automobile" class="btn-primary">Lire plus</a>
+            </div>
+            <div class="news-item">
+                <h3>Peugeot devient la marque automobile la plus éco-responsable</h3>
+                <p>Découvrez les efforts de Peugeot pour réduire son empreinte carbone et s'engager dans une mobilité durable.</p>
+                <a href="https://www.peugeot.fr/marque/politique-environnementale/developpement-durable.html" class="btn-primary">Lire plus</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Peugeot. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+
+            function changeSlide() {
+                slides[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % slides.length;
+                slides[currentIndex].classList.add('active');
+            }
+
+            setInterval(changeSlide, 5000);
+        });
+    </script>
+</body>
+</html>
